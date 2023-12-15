@@ -1,0 +1,55 @@
+.gallery{
+  position:relative;
+  box-sizing: border-box;
+  width: 100%;
+  height:265vw;
+  font-family: $font-titles;
+  &__filigran{
+      position:relative;
+      z-index:-2;
+      @extend %filigran;
+      margin:0.4em 0 0.2em 0;
+    }
+  
+    &__wrapTitle{
+      @include wrapTitle(-160%);
+    }
+    .gallery_image{
+      &_food1{
+        img{
+          width: 480px;
+          vertical-align: bottom;
+        }
+      }
+      &_food2{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        img{
+          width: 240px;
+          height: 270px;
+        }
+      }
+      &_food3{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        img{
+          width: 240px;
+          height: 270px;
+        }
+      }
+    }
+    .more_infos{
+      text-align: center;
+      margin: auto;
+      text-transform: capitalize;
+      margin: 5px 150px 5px 150px;
+      padding: 5px;
+      // border: 1px solid $color-black;
+      text-transform: uppercase;
+      width: 220px;
+    }
+}
+
+@media only screen and (min-width: 1024px){
+
+}  

@@ -1,0 +1,141 @@
+// Header
+
+html {
+  height: 100%;
+  body {
+    min-height: 100%;
+    margin: 0;
+    header {
+      min-height: 120vh;
+    }
+  }
+}
+
+.header {
+  // background-image: url('/assets/img/slider/img_bg_slider_home01.jpg');
+  background: linear-gradient(
+      159deg,
+      rgba(2, 7, 9, 0.9906162294019171) 32%,
+      rgba(9, 13, 15, 0) 100%,
+      rgba(255, 255, 255, 0) 100%,
+      rgba(0, 0, 0, 1) 100%,
+      rgba(0, 0, 0, 1) 100%,
+      rgba(0, 0, 0, 1) 100%
+    ),
+    url(assets/img/slider/img_bg_slider_home01.jpg);
+  background-size: cover;
+  background-position: center center;
+  color: $color-white;
+  li {
+    font-family: "Open Sans", sans-serif;
+  }
+  .header_img {
+    margin: 20px;
+    margin-bottom: 20px;
+  }
+  .header_logo {
+    display: flex;
+    justify-content: center;
+  }
+  .header_title {
+    display: flex;
+    justify-content: center;
+    font-family: "Cinzel", serif;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .fa-phone {
+    color: $color-darkgold;
+  }
+  .header_header_phone_book {
+    padding: 10px;
+    background-color: $color-darkgold;
+    border-radius: 5px;
+  }
+  .header_phone {
+    float: right;
+  }
+  .header_header_phone_book,
+  .header_header_phone_num {
+    list-style: none;
+    margin: 20px;
+  }
+  .header_ul_li_home,
+  .header_ul_li_about,
+  .header_ul_li_page,
+  .header_ul_li_shop,
+  .header_ul_li_contact {
+    list-style: none;
+    margin-bottom: 4px;
+    cursor: pointer;
+    width: 80px;
+    margin-left: 20px;
+    &:hover{
+      color: $color-darkgold;
+    }
+  }
+}
+.header_p {
+  margin-left: 150px;
+  font-size: small;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid $color-white;
+  width: 190px;
+  color: $color-darkgold;
+  &:hover {
+    background-color: $color-darkgold;
+    color: $color-black;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .header_p{
+    margin: auto;
+  }
+  .header_phone{
+    margin:20px;
+    .header_header_phone_num{
+      margin-top:10px;
+      margin-right: 10px;
+    }
+  }
+}
+@media only screen and (min-width: 1024px) {
+  
+  li {
+    display: inline;
+  }
+  .header_p{
+    margin-left: 80px;
+  }
+  .header_logo{
+    position: absolute;
+    top:200px;
+    left: 350px;
+  }
+  .header_ul {
+    position: absolute;
+    left: 25%;
+    top: 25px;
+    li{
+      margin-left:15px;
+    }
+  }
+  .header_phone {
+    display: flex;
+    flex-direction: row-reverse;
+    .header_header_phone_num{
+      margin-top: 30px;
+    }
+  }
+  .header_title {
+    float: none;
+    width: 50px;
+    font-size: 500%;
+    .header_title_head{
+      margin-left: 450px;
+      margin-top:230px;
+    }
+  }
+}

@@ -1,0 +1,136 @@
+.menu{
+    position:relative;
+    z-index: 0;
+    width: 100%;
+    height:170vw;
+    padding: 20px;
+    font-family: $font-titles;
+    background-position: 0% 80% ;
+    background-color: rgba(250,237,210,0.5);
+    background-repeat: no-repeat;
+    background-position:left bottom;
+    // background-size:contain;
+}
+
+.menu__filigran{
+    @extend %filigran;
+    margin:0.4em 0 0.2em 0;
+}  
+    
+.menu__wrapTitle{
+        @include wrapTitle(-160%);
+}
+    
+.menu__wrapItems {
+    position:relative;
+    z-index: 2;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8,1fr);
+    width:70vw;
+    margin:50px auto;
+    gap: 15px;
+    &__item {
+        border:dashed 2px white;
+        border-radius: 4px;
+        background-color: #fff;
+        padding: 10px 15px;
+        display: grid;
+        grid-template-columns: 6fr 1fr;
+        grid-template-rows: 20px 20px;
+        
+        grid-template-areas: 
+        "title price"
+        "description price";
+        &:hover{
+            border:dashed 2px $color-darkgold;
+        }
+        &__title{
+            grid-area: title;
+            font-family: $font-titles;
+        }
+        &__description {
+            grid-area: description;
+            font-family: $font-p;
+            font-size:12px;
+        }
+        &__price {
+            grid-area: price;
+            color: $color-darkgold;
+            font-size: 25px ;
+            line-height: 40px;
+        }
+    }
+}
+
+.menu__img {
+    position:absolute;
+    display:block;
+    top: 43vw;
+    margin-left: -70px;
+    z-index: 1;
+    
+}
+
+@media only screen and (min-width: 1024px) {
+    .menu{
+        height: 88vw;
+        &__filigran{
+            @include filigranDesktop;
+            margin:0.4em 0 0.2em 0;
+        }
+      
+        &__wrapTitle{
+            @include wrapTitleDesktop(-220%);
+        }
+    }
+
+}
+
+@media only screen and (min-width: 1024px) {
+    .menu{ 
+        height:50vw;
+    }
+    .menu__wrapItems {
+        position:relative;
+        z-index: 2;
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4,1fr);
+        width:70vw;
+        margin:50px auto;
+        gap: 15px;
+        &__item {
+            border:dashed 4px white;
+            border-radius: 8px;
+            background-color: #fff;
+            padding: 10px 15px;
+            display: grid;
+            grid-template-columns: 6fr 1fr;
+            grid-template-rows: 40px 40px;
+            
+            grid-template-areas: 
+            "title price"
+            "description price";
+            &:hover{
+                border:dashed 4px $color-darkgold;
+            }
+            &__title{
+                grid-area: title;
+                font-size:34px;
+                font-family: $font-titles;
+            }
+            &__description {
+                grid-area: description;
+                font-family: $font-p;
+                font-size:20px;
+            }
+            &__price {
+                grid-area: price;
+                color: $color-darkgold;
+                font-size: 40px ;
+                line-height: 40px;
+            }
+        }
+    }
+}
